@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drag and Drop Sencillo con SortableJS</title>
+    <style>
+      /* Estilos opcionales */
+      #lista {
+        list-style-type: none;
+        padding: 0;
+        max-width: 200px;
+        margin: auto;
+      }
+      #lista li {
+        padding: 10px;
+        margin: 5px 0;
+        background-color: #e2e2e2;
+        cursor: move;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="lista">
+      <li>Elemento 1</li>
+      <li>Elemento 2</li>
+      <li>Elemento 3</li>
+      <li>Elemento 4</li>
+    </ul>
+
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+    <script>
+      const lista = document.getElementById("lista");
+      new Sortable(lista, {
+          animation: 150
+      });
+    </script>
+  </body>
+</html>
