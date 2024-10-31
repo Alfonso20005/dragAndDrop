@@ -23,7 +23,27 @@ El archivo HTML proporciona una lista simple de elementos (`Elemento 1`, `Elemen
 Este proyecto usa la librería **SortableJS**. La librería se carga desde el **CDN oficial** en el archivo HTML, por lo que **no es necesario instalar ninguna dependencia localmente**.
 
 > [!NOTE]\
-> También puedes utilizar este código si no quieres crear .
+> También puedes utilizar este código:
+> ```bash
+>    <script>
+>      // Inicializo Sortable en la lista
+>      const lista = document.getElementById("lista");
+>      Sortable.create(lista);
+>    </script>
+>```
+
+## 📝 Resumen de Diferencias
+
+| Característica      | `Sortable.create(lista)`                     | `new Sortable(lista, { animation: 150 })`       |
+|---------------------|----------------------------------------------|-------------------------------------------------|
+| **🔤 Sintaxis**     | Forma abreviada                              | Forma detallada y personalizable                |
+| **🎞️ Animación**    | No incluida                                  | Animación de 150ms                              |
+| **⚙️ Personalización** | No permite opciones de configuración         | Permite agregar varias opciones                 |
+| **✔️ Uso recomendado** | Casos simples                                | Casos que requieren personalización             |
+
+En resumen, si necesitas más control y personalización, usa `new Sortable` con opciones de configuración; si solo quieres el comportamiento básico de arrastrar y soltar sin personalización, `Sortable.create` es suficiente.
+
+
 
 # 🎨 Personalización
 
